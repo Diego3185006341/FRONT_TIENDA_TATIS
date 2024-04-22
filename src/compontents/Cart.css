@@ -1,0 +1,31 @@
+/* Cart.css */
+
+/* Estilos para el contenedor del carrito */
+.container {
+    margin-top: 20px;
+  }
+  
+  /* Estilos para la tarjeta de cada elemento en el carrito */
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilos para el botón "Quitar del carrito" */
+  .btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+  }
+  
+  .btn-danger:hover {
+    background-color: #c82333;
+  }
+  
+  /* Estilos para el mensaje cuando el carrito está vacío */
+  p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #555;
+  }
