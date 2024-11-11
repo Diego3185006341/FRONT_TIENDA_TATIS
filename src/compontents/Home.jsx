@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Navbar, Nav, Container, Row, Col, Card } from 'react-bootstrap';
+import { Navbar, Nav, Container, Row, Col, Card, Carousel } from 'react-bootstrap'; 
 import { BiCart } from 'react-icons/bi';
 import './Home.css'; // Asegúrate de reemplazar con la ruta correcta
 import axios from 'axios';
@@ -14,10 +14,7 @@ const Home = () => {
       .catch(error => console.error(error));
   }, []);
 
-
-
-  async function addToCart (event, producto) {  
-    // Aquí puedes implementar la lógica para agregar el producto al carrito
+  async function addToCart(event, producto) {  
     event.preventDefault();
     try {
       await axios.post("http://localhost:8085/api/v1/store/save-product/PENDING", {
@@ -27,17 +24,15 @@ const Home = () => {
         productosCantidad: producto.productosCantidad,
         image: producto.image,
       });
-      alert("Employee Registation Successfully");
+      alert("Producto añadido al carrito");
     } catch (err) {
       alert(err);
     }
-   };
-
+  }
 
   return (
     <div>
       <Navbar className="mi-barra-de-navegacion" variant="dark" expand="lg">
-        {/* Logo en el Navbar */}
         <Navbar.Brand href="#home">
           <img
             alt="Logo"
@@ -66,7 +61,44 @@ const Home = () => {
         </Navbar.Collapse>
       </Navbar>
 
-  
+      {/* Carrusel de imágenes */}
+      <Container className="mt-4">
+        <Carousel>
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              src="https://www.graficoywebvalencia.es/wp-content/uploads/2022/04/tienda-online-papeleria-bonita.jpg" // Cambia a tu imagen
+              alt="First slide"
+            />
+            <Carousel.Caption>
+              <h3>Bienvenidos a Tienda Gran Colombia</h3>
+              <p>Encuentra los mejores productos aquí.</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              src="https://img.freepik.com/vector-premium/escuela-venta-herramientas-tienda-publicidad-banner_87720-3341.jpg?semt=ais_hybrid" // Cambia a tu imagen
+              alt="Second slide"
+            />
+            <Carousel.Caption>
+              <h3>Productos exclusivos</h3>
+              <p>Solo en nuestra tienda.</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              src="https://static7.depositphotos.com/1177973/679/i/450/depositphotos_6794033-stock-photo-stationery-isolated-on-white.jpg" // Cambia a tu imagen
+              alt="Third slide"
+            />
+            <Carousel.Caption>
+              <h3>Promociones Especiales</h3>
+              <p>No te pierdas nuestras ofertas.</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+        </Carousel>
+      </Container>
 
       {/* Sección de productos */}
       <Container className="mt-4">
@@ -78,7 +110,7 @@ const Home = () => {
                 <Card.Body>
                   <Card.Title>{producto.nomProductos}</Card.Title>
                   <Card.Text>Precio: ${producto.productosPrecio}</Card.Text>
-                  <Card.Text>Cantidad: ${producto.productosCantidad}</Card.Text>
+                  <Card.Text>Cantidad: {producto.productosCantidad}</Card.Text>
                   <button className="btn btn-primary" onClick={(event) => addToCart(event, producto)}>
                     Añadir al carrito
                   </button>
@@ -91,7 +123,6 @@ const Home = () => {
     </div>
   );
 };
-
 
 const NavItem = ({ href, children }) => (
   <Nav.Link href={href}>{children}</Nav.Link>
