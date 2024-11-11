@@ -56,7 +56,7 @@ const Home = () => {
             <NavItem href="/Cart_class">
               <BiCart size={30} />
             </NavItem>
-            <NavItem href="/ComprasRealizadas">Compras Realizadas</NavItem>
+            <NavItem href="/Authorizedproducts">Compras Realizadas</NavItem>
           </Nav>
           <Nav className="ms-auto">
             <NavItem href="/" className="ml-auto">

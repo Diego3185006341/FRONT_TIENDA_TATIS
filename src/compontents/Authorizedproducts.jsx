@@ -49,7 +49,7 @@ const AuthorizedProducts = () => {
             <NavItem href="/Cart_class">
               <BiCart size={30} />
             </NavItem>
-            <NavItem href="/ComprasRealizadas">Compras Realizadas</NavItem>
+            <NavItem href="/Authorizedproducts">Compras Realizadas</NavItem>
           </Nav>
           <Nav className="ms-auto">
             <NavItem href="/" className="ml-auto">
@@ -69,9 +69,6 @@ const AuthorizedProducts = () => {
                   <Card.Title>{producto.nomProductos}</Card.Title>
                   <Card.Text>Precio: ${producto.productosPrecio}</Card.Text>
                   <Card.Text>Cantidad: ${producto.productosCantidad}</Card.Text>
-                  <button className="btn btn-primary" onClick={(event) => buy(event, producto)}>
-                    Comprar
-                  </button>
                 </Card.Body>
               </Card>
             </Col>
