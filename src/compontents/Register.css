@@ -1,0 +1,88 @@
+/* Fondo de la página */
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://img.freepik.com/vector-premium/fondo-escuela-tema-escolar-inscripcion-cuaderno-dibujo-tinta-formacion-lecciones-tiempo_497922-1085.jpg'); /* Cambia la URL por tu imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  /* Caja de registro */
+  .register-box {
+    background: rgba(255, 255, 255, 0.8); /* Fondo blanco con algo de transparencia */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  /* Logo y título */
+  .logo-container {
+    margin-bottom: 30px;
+  }
+  
+  .logo {
+    max-width: 100px; /* Tamaño máximo del logo */
+    margin-bottom: 15px;
+  }
+  
+  /* Estilos del formulario */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .login-link {
+    margin-top: 15px;
+  }
+  
+  .login-link a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .login-link a:hover {
+    text-decoration: underline;
+  }
