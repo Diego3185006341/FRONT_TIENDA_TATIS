@@ -18,7 +18,7 @@ const Cart = () => {
     // Aquí puedes implementar la lógica para agregar el producto al carrito
     event.preventDefault();
     try {
-      await axios.post("http://localhost:8085/api/v1/store/save-product/PENDING", {
+      await axios.post("http://localhost:8085/api/v1/store/save-product/AUTHORIZED", {
         idProductos: producto.idProductos,
         nomProductos: producto.nomProductos,
         productosPrecio: producto.productosPrecio,
